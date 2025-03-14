@@ -28,13 +28,13 @@ def osi_simulation(data):
         PhysicalLayer("Physical Layer")
     ]
     
-    print("\nEncapsulation:")
+    print("\nTransmit Data:")
     for layer in layers:
         data = layer.send(data)
         print(data)
         print()  
     
-    print("\nDe-encapsulation:")
+    print("\nReceive Data:")
     for layer in reversed(layers):
         data = layer.receive(data)
         print(data)
